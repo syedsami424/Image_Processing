@@ -12,6 +12,7 @@ image_fullpath = "C:/Users/iqras/OneDrive/Documents/NLP_projects/tensorflow_proj
 labels = ['A-10', 'B-1', 'B-2', 'B-29', 'B52', 'Boeing', 'C-5', 'C-17', 'C-21', 'C-130', 'C-135', 'E-3', 'F-15', 'F-16', 'F-22', 'F-35','KC-10', 'P-63', 'U-2']
 
 print(len(labels))
+
 '''
 x_train = np.zeros((1, 64, 64, 3))
 y_train = np.zeros(1)

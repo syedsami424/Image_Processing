@@ -1,0 +1,2 @@
+-The first program to be run is: modify_mtarsi_dataset.py 
+    -It creates the main dataset h5py dataset
