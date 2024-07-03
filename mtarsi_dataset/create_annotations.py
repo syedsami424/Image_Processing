@@ -1,18 +1,18 @@
-# import pandas as pd
-# import csv
-# import os
+import pandas as pd
+import csv
+import os
 
 
 
-# labels = []
-# for root, dirs, files in os.walk(r"MTARSI 2.v2i.folder\train", topdown=False):
-#     for name in dirs:
-#         print(name)
-#         labels.append(name)
+labels = []
+for root, dirs, files in os.walk(r"MTARSI 2.v2i.folder\train", topdown=False):
+    for name in dirs:
+        print(name)
+        labels.append(name)
     
 
-# print(labels)
-# print(len(labels))
+print(labels)
+print(len(labels))
 
 # print()
 # print()
@@ -24,6 +24,7 @@
 
 # print(directory_list)
 
+'''
 import os
 import csv
 
@@ -57,3 +58,4 @@ shuffled_df.to_csv(new_csv_file, index=False)
 print(f"Shuffled CSV file '{new_csv_file}' created successfully!")
 
 print(f"CSV file '{csv_file}' created successfully!")
+'''

@@ -6,18 +6,16 @@ import os
 from tqdm import tqdm
 from sklearn.utils import shuffle
 
-codes_fullpath = "C:/Users/iqras/OneDrive/Documents/NLP_projects/tensorflow_projects/CNN_Course/MTARSI_Dataset"
-image_fullpath = "C:/Users/iqras/OneDrive/Documents/NLP_projects/tensorflow_projects/CNN_Course/MTARSI_Dataset/train"
+codes_fullpath = r"D:\Image_Processing\mtarsi_dataset"
+image_fullpath = r"D:\Image_Processing\MTARSI 2.v2i.folder\train"
 
-labels = ['A-10', 'B-1', 'B-2', 'B-29', 'B52', 'Boeing', 'C-5', 'C-17', 'C-21', 'C-130', 'C-135', 'E-3', 'F-15', 'F-16', 'F-22', 'F-35','KC-10', 'P-63', 'U-2']
+labels = ['A-10_Thunderbolt', 'Airliner', 'B-1_Lancer', 'B-2_Spirit', 'B-52_Stratofortress', 'B-57_Canberra', 'BusinessJet', 'C-130_Hercules', 'C-135_Stratolifter', 'C-17_Globemaster', 'C-5_Galaxy', 'E-2_Hawkeye', 'E-3_Sentry', 'EA-6B_Prowler', 'F-15_Eagle', 'F-16_Falcon', 'F-18_Hornet', 'F-22_Raptor', 'F-35_JSF', 'F-4_Phantom', 'King_Air', 'P-3_Orion', 'RC-135_Rivit_Joint', 'Small planes', 'Tu-160_Tupolev_White_Swan', 'UTA_Fokker_50_Utility_Transport']
+# print(len(labels))
 
-print(len(labels))
-
-'''
-x_train = np.zeros((1, 64, 64, 3))
+x_train = np.zeros((1, 140, 140, 3))
 y_train = np.zeros(1)
 
-x_temp = np.zeros((1, 64, 64, 3))
+x_temp = np.zeros((1, 140, 140, 3))
 y_temp = np.zeros(1)
 
 first_object = True
@@ -42,8 +40,8 @@ for _, row in tqdm(df.iterrows(), total=len(df)):
 
         image_array = cv2.cvtColor(image_array, cv2.COLOR_BGR2RGB)
 
-        if image_array.shape[0] >= 64 and image_array.shape[1] >= 64:
-            cut_object = cv2.resize(image_array, (64, 64), interpolation=cv2.INTER_CUBIC)
+        if image_array.shape[0] >= 140 and image_array.shape[1] >= 140:
+            cut_object = cv2.resize(image_array, (140, 140), interpolation=cv2.INTER_CUBIC)
 
             if first_object:
                 x_train[0, :, :, :] = cut_object
@@ -82,4 +80,3 @@ with h5py.File('dataset_mtarsi.hdf5', 'w') as f:
     f.create_dataset('y_test', data=y_test, dtype='i')
 
 print("Dataset creation complete.")
-'''
